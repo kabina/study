@@ -9,11 +9,9 @@ graph = [0]*(max+1)
 
 def bfs():
     queue = deque([n])
-    queue.append(n)
     while queue:
         cur = queue.popleft()
         if cur == m:
-            print(graph[1:50])
             return graph[cur]
         for adj in [cur-1, cur+1, cur*2]:
             if 0 <= adj <= max and graph[adj]==0:
